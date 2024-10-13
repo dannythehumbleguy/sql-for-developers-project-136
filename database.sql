@@ -13,9 +13,9 @@ CREATE TABLE lessons
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(256) NOT NULL,
     content VARCHAR(8192) NOT NULL,
-    video_url VARCHAR(256) NOT NULL,
-    position INT NOT NULL,
-    course_id BIGINT REFERENCES courses (id) NOT NULL,
+    video_url VARCHAR(256) NULL,
+    position INT NULL,
+    course_id BIGINT REFERENCES courses (id) NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NULL,
     deleted_at TIMESTAMP NULL

@@ -25,7 +25,7 @@ CREATE TABLE quizzes
 (
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(256) NOT NULL,
-    content VARCHAR(2048) NOT NULL,
+    content jsonb NOT NULL,
     lesson_id BIGINT REFERENCES lessons (id) NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NULL

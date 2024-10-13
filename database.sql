@@ -146,7 +146,7 @@ CREATE TABLE certificates
 CREATE TABLE discussions
 (
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    text VARCHAR(2048) NOT NULL,
+    text jsonb NOT NULL,
     lesson_id BIGINT REFERENCES lessons (id) NOT NULL,
     user_id BIGINT REFERENCES users (id) NOT NULL,
     created_at TIMESTAMP NOT NULL,
